@@ -147,7 +147,7 @@ type Image struct {
 }
 
 func newImage(url string) Image {
-	p1 := strings.Split(url, "/")
+	p1 := strings.SplitN(url, "/", 2)
 	p2 := strings.Split(p1[1], ":")
 	version := "latest"
 	if len(p2) == 2 {
